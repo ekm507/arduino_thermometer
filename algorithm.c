@@ -54,7 +54,7 @@ void show7seg(char b[5])
     for(int i = 0; i < 4; i++)
     {
         dataPort = b[i];
-        selectPort = (1 << i) ~ (0 - 1);
+        selectPort = (1 << i) ^ (0 - 1);
         delay_ms(1);
     }
 }
